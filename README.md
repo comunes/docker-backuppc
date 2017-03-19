@@ -25,6 +25,13 @@ if yes, move the configuration from packaging into it.
 
 * ``80``: Webinterface
 
+### Monitor
+
+You can check externally the status of your backups with something like:
+```
+docker exec -i -u backuppc -t NAME /usr/lib/nagios/plugins/check_backuppc
+```
+
 ## License
 
 AGPLv3
