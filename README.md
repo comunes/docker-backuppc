@@ -32,3 +32,5 @@ AGPLv3
 ## Author information
 
 Alvaro Aleman
+
+* Nagios plugin added by Vicente J. Ruiz Jurado (vjrj)
