@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-A simple docker container for running Backuppc based in `alvaroaleman/backuppc`docker adding a nagios monitoring plugin
+A simple docker container for running Backuppc based in `alvaroaleman/backuppc` adding a nagios monitoring plugin
 
 ## Description
 
