@@ -14,7 +14,7 @@ RUN \
     # Install packages \
     apt-get update -y && \
     echo 'backuppc backuppc/reconfigure-webserver multiselect apache2' | debconf-set-selections && \
-    apt-get install -y debconf-utils backuppc supervisor && \
+    apt-get install -y debconf-utils backuppc supervisor monitoring-plugins-common && \
 
     # Configure package config to a temporary folder to be able to restore it when no config is present
     mkdir -p $TMP_CONFIG $TMP_DATA/.ssh && \
@@ -41,6 +41,7 @@ RUN \
     chmod ugo+x $STARTSCRIPT
 
 ADD supervisor.conf /etc/supervisor/conf.d/supervisord.conf
+ADD check_backuppc /usr/lib/nagios/plugins/check_backuppc
 
 EXPOSE 80
 VOLUME $PERSISTENT_DATA
