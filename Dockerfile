@@ -6,7 +6,8 @@ ENV TMP_DATA /backuppc_initial_data
 ENV PERSISTENT_CONFIG /etc/backuppc
 ENV PERSISTENT_DATA /var/lib/backuppc
 ENV STARTSCRIPT /usr/local/bin/dockerstart.sh
-ENV RESET_PERMISSIONS true
+# vjrj: changed to false because it's very slow:
+ENV RESET_PERMISSIONS false
 
 ADD startscript.sh $STARTSCRIPT
 
