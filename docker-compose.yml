@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  backuppc03:
+    image: comunes/docker-backuppc
+    # build: .
+    container_name: backuppc03
+    restart: always
+    hostname: backuppc03
+    ports:
+      - "8001:80"
+    volumes:
+      - /etc/backuppc03:/etc/backuppc:rw
+      - /some-media/backuppc03:/var/lib/backuppc:rw
