@@ -15,7 +15,7 @@ RUN \
     # Install packages \
     apt-get update -y && \
     echo 'backuppc backuppc/reconfigure-webserver multiselect apache2' | debconf-set-selections && \
-    apt-get install -y debconf-utils backuppc supervisor monitoring-plugins-common vim && \
+    apt-get install -y debconf-utils backuppc supervisor monitoring-plugins-common vim netcat ssh-tools && \
     # Configure package config to a temporary folder to be able to restore it when no config is present
     mkdir -p $TMP_CONFIG $TMP_DATA/.ssh && \
     mv $PERSISTENT_CONFIG/* $TMP_CONFIG && \
